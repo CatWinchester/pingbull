@@ -1,6 +1,7 @@
 ﻿@font-face {
   font-family: LeagueGothic;
   src: url(fonts/League_Gothic.otf);
+  font-style: normal;
 }
 * {
   margin: 0;
@@ -11,17 +12,25 @@ body {
   background: url(img/bg.png) no-repeat;
   font-family: LeagueGothic, Helvetica, Arial, sans-serif;
   font-size: 24pt;
+  font-weight: normal;
   color: #ffffff;
 }
 header {
   width: 960px;
   margin: 0 auto;
-  height: 100px;
-  -webkit-text-shadow: 2px 2px 7px #000000;
-  text-shadow: 2px 2px 7px #000000;
+  height: 250px;
+  -webkit-text-shadow: 2px 2px 5px #808080;
+  text-shadow: 2px 2px 5px #808080;
 }
 header span {
-  background: -webkit-linear-gradient(#745083, #333333);
+  background: #745083;
+  background: -moz-linear-gradient(top, #745083 0%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #745083), color-stop(100%, #000000));
+  background: -webkit-linear-gradient(top, #745083 0%, #000000 100%);
+  background: -o-linear-gradient(top, #745083 0%, #000000 100%);
+  background: -ms-linear-gradient(top, #745083 0%, #000000 100%);
+  background: linear-gradient(to bottom, #745083 0%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -32,10 +41,13 @@ header a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 header a:hover {
   border-bottom: 2px solid #edbfff;
+}
+header a:last-child {
+  margin-right: 0;
 }
 header nav {
   float: right;
@@ -45,7 +57,12 @@ header nav {
   display: inline-block;
   float: left;
 }
-#main_content {
+#slider {
   width: 960px;
   margin: 0 auto;
+  height: 500px;
+}
+.sliderWrap {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }

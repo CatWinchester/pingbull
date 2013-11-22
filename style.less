@@ -1,6 +1,7 @@
 ﻿@font-face{
     font-family:LeagueGothic;
     src:url(fonts/League_Gothic.otf);
+    font-style:normal;
 }
 
 @mainWidth:960px;
@@ -25,7 +26,7 @@
     margin:0 auto;
 }
 
-.text-shadow(@width:2px, @heigth:2px, @blur:7px, @color:#000){    
+.text-shadow(@width:2px, @heigth:2px, @blur:5px, @color:#808080){    
     -webkit-text-shadow: @width @heigth @blur @color; 
     text-shadow: @width @heigth @blur @color; 
 }
@@ -39,16 +40,17 @@ body{
     background: url("img/bg.png") no-repeat;
     font-family:LeagueGothic, Helvetica, Arial, sans-serif;
     font-size:24pt;
+    font-weight:normal;
     color:@mainColorWhite;
 }
 
 header {
     .centeredElement(@mainWidth);
-    height: 100px;
+    height: 250px;
     .text-shadow();
 
     span {
-        background: -webkit-linear-gradient(@mainColorBlueBerry, #333);
+        .gradient(@mainColorBlueBerry,#000);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
@@ -59,10 +61,13 @@ header {
         color: #fff;
         text-decoration: none;
         text-transform:uppercase;
-        margin: 0 10px;
+        margin: 0 20px;
 
         &:hover{
             border-bottom:2px solid @aColorBottom;
+        }
+        &:last-child{
+            margin-right:0;
         }
     }
     nav {
@@ -75,6 +80,11 @@ header {
     float:left;
 }
 
-#main_content{
+#slider{
     .centeredElement(@mainWidth);
+    height:500px;
+}
+.sliderWrap{
+    width:100%;
+    background:rgba(0,0,0,0.3);
 }
