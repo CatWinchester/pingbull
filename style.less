@@ -1,8 +1,80 @@
-﻿* {
+﻿@font-face{
+    font-family:LeagueGothic;
+    src:url(fonts/League_Gothic.otf);
+}
+
+@mainWidth:960px;
+@mainColorWhite:#fff;
+@mainColorBlueBerry:#745083;
+
+@aColorBottom:#edbfff;
+
+.gradient(@color1, @color2){
+    background: @color1;
+    background: -moz-linear-gradient(top, @color1 0%, @color2 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color1), color-stop(100%,@color2));
+    background: -webkit-linear-gradient(top, @color1 0%, @color2 100%);
+    background: -o-linear-gradient(top, @color1 0%, @color2 100%);
+    background: -ms-linear-gradient(top, @color1 0%, @color2 100%);
+    background: linear-gradient(to bottom, @color1 0%, @color2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=0 );
+}
+
+.centeredElement(@width){
+    width:@width;
+    margin:0 auto;
+}
+
+.text-shadow(@width:2px, @heigth:2px, @blur:7px, @color:#000){    
+    -webkit-text-shadow: @width @heigth @blur @color; 
+    text-shadow: @width @heigth @blur @color; 
+}
+
+* {
    margin:0;
    padding:0;
    border:0;
 }
 body{
     background: url("img/bg.png") no-repeat;
+    font-family:LeagueGothic, Helvetica, Arial, sans-serif;
+    font-size:24pt;
+    color:@mainColorWhite;
+}
+
+header {
+    .centeredElement(@mainWidth);
+    height: 100px;
+    .text-shadow();
+
+    span {
+        background: -webkit-linear-gradient(@mainColorBlueBerry, #333);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+    a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        text-transform:uppercase;
+        margin: 0 10px;
+
+        &:hover{
+            border-bottom:2px solid @aColorBottom;
+        }
+    }
+    nav {
+        float: right;
+        margin-top:40px;
+    }
+}
+#logo{
+    display:inline-block;
+    float:left;
+}
+
+#main_content{
+    .centeredElement(@mainWidth);
 }
