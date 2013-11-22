@@ -81,14 +81,20 @@ header nav {
   display: inline-block;
   float: left;
 }
+.sliderWrap {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
 #slider {
   width: 960px;
   margin: 0 auto;
   height: 350px;
 }
-.sliderWrap {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+#slider img {
+  position: relative;
+  float: right;
+  top: -20px;
+  margin: 0 60px 0 0;
 }
 .sliderNavigation {
   position: relative;
