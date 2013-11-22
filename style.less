@@ -1,14 +1,27 @@
-﻿@font-face{
+﻿@fontfaceURLOpenS:fonts/openSans/;
+
+@font-face{
     font-family:LeagueGothic;
     src:url(fonts/League_Gothic.otf);
     font-style:normal;
+}
+@font-face{
+    font-family:OpenSans;
+    src: url('fonts/openSans/OpenSans-Light-webfont.eot'); /* IE9 Compat Modes */
+	src: url('fonts/openSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('fonts/openSans/OpenSans-Light-webfont.woff') format('woff'), /* Modern Browsers */
+	     url('fonts/openSans/OpenSans-Light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('fonts/openSans/OpenSans-Light-webfont.svg') format('svg');
 }
 
 @mainWidth:960px;
 @mainColorWhite:#fff;
 @mainColorBlueBerry:#745083;
+@mainColorPink:#edbfff;
 
-@aColorBottom:#edbfff;
+@headerHeight:200px;
+
+@sliderHeight:350px;
 
 .gradient(@color1, @color2){
     background: @color1;
@@ -26,9 +39,9 @@
     margin:0 auto;
 }
 
-.text-shadow(@width:2px, @heigth:2px, @blur:5px, @color:#808080){    
-    -webkit-text-shadow: @width @heigth @blur @color; 
-    text-shadow: @width @heigth @blur @color; 
+.text-shadow(@offsetX:2px, @offsetY:2px, @blur:5px, @color:#808080){    
+    -webkit-text-shadow: @offsetX @offsetY @blur @color; 
+    text-shadow: @offsetX @offsetY @blur @color; 
 }
 
 * {
@@ -39,14 +52,27 @@
 body{
     background: url("img/bg.png") no-repeat;
     font-family:LeagueGothic, Helvetica, Arial, sans-serif;
-    font-size:24pt;
-    font-weight:normal;
+    font-size:24px;
+    font-weight:100;
     color:@mainColorWhite;
+}
+h2, h3{
+    .text-shadow(0,2px,3px,#000);
+}
+h2{
+    font-size:50px;
+}
+h3{
+   color:@mainColorPink;
+}
+p{
+    font-family:OpenSans;
+    font-size:18px;
 }
 
 header {
     .centeredElement(@mainWidth);
-    height: 250px;
+    height: @headerHeight;
     .text-shadow();
 
     span {
@@ -61,10 +87,11 @@ header {
         color: #fff;
         text-decoration: none;
         text-transform:uppercase;
-        margin: 0 20px;
+        margin: 0 16px;
+        padding:0 5px;
 
         &:hover{
-            border-bottom:2px solid @aColorBottom;
+            border-bottom:2px solid @mainColorPink;
         }
         &:last-child{
             margin-right:0;
@@ -72,7 +99,7 @@ header {
     }
     nav {
         float: right;
-        margin-top:40px;
+        margin-top:60px;
     }
 }
 #logo{
@@ -82,9 +109,15 @@ header {
 
 #slider{
     .centeredElement(@mainWidth);
-    height:500px;
+    height:@sliderHeight;
 }
 .sliderWrap{
     width:100%;
-    background:rgba(0,0,0,0.3);
+    background:rgba(0,0,0,0.2);
+}
+.sliderNavigation{
+    position:relative;
+    display:inline-block;
+    width:@mainWidth/2;
+    margin:60px 0 0 0;
 }

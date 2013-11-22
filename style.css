@@ -3,6 +3,14 @@
   src: url(fonts/League_Gothic.otf);
   font-style: normal;
 }
+@font-face {
+  font-family: OpenSans;
+  src: url(fonts/openSans/OpenSans-Light-webfont.eot);
+  src: url(fonts/openSans/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+   url(fonts/openSans/OpenSans-Light-webfont.woff) format('woff'), /* Modern Browsers */
+   url(fonts/openSans/OpenSans-Light-webfont.ttf) format('truetype'), /* Safari, Android, iOS */
+   url(fonts/openSans/OpenSans-Light-webfont.svg) format('svg');/* IE9 Compat Modes */
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +19,29 @@
 body {
   background: url(img/bg.png) no-repeat;
   font-family: LeagueGothic, Helvetica, Arial, sans-serif;
-  font-size: 24pt;
-  font-weight: normal;
+  font-size: 24px;
+  font-weight: 100;
   color: #ffffff;
+}
+h2,
+h3 {
+  -webkit-text-shadow: 0 2px 3px #000000;
+  text-shadow: 0 2px 3px #000000;
+}
+h2 {
+  font-size: 50px;
+}
+h3 {
+  color: #edbfff;
+}
+p {
+  font-family: OpenSans;
+  font-size: 18px;
 }
 header {
   width: 960px;
   margin: 0 auto;
-  height: 250px;
+  height: 200px;
   -webkit-text-shadow: 2px 2px 5px #808080;
   text-shadow: 2px 2px 5px #808080;
 }
@@ -41,7 +64,8 @@ header a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin: 0 20px;
+  margin: 0 16px;
+  padding: 0 5px;
 }
 header a:hover {
   border-bottom: 2px solid #edbfff;
@@ -51,7 +75,7 @@ header a:last-child {
 }
 header nav {
   float: right;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 #logo {
   display: inline-block;
@@ -60,9 +84,15 @@ header nav {
 #slider {
   width: 960px;
   margin: 0 auto;
-  height: 500px;
+  height: 350px;
 }
 .sliderWrap {
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+}
+.sliderNavigation {
+  position: relative;
+  display: inline-block;
+  width: 480px;
+  margin: 60px 0 0 0;
 }
