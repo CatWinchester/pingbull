@@ -23,13 +23,6 @@ body {
   font-weight: 100;
   color: #ffffff;
 }
-h2,
-h3,
-h4,
-p {
-  -webkit-text-shadow: 0 2px 3px #000000;
-  text-shadow: 0 2px 3px #000000;
-}
 h2 {
   font-size: 50px;
 }
@@ -37,11 +30,17 @@ h3 {
   color: #edbfff;
 }
 h4 {
-  font-size: 25px;
+  font-size: 30px;
   text-transform: uppercase;
+}
+h5 {
+  font-size: 16px;
+  font-family: OpenSans, 'Times New Roman', sans-serif;
 }
 p {
   font-family: OpenSans;
+  font-size: 16px;
+  line-height: 24px;
 }
 a {
   display: inline-block;
@@ -89,18 +88,24 @@ header nav {
   float: left;
 }
 .sliderWrap,
-.blurbWrap {
+.blurbWrap,
+.bottom_contentWrap {
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+}
+.sliderWrap {
   margin: 0 0 140px 0;
+  background: rgba(0, 0, 0, 0.2);
 }
 #sliderContainer,
-#blurbsContainer {
+#blurbsContainer,
+#bottom_contentContainer {
   width: 960px;
   margin: 0 auto;
 }
 #sliderContainer {
   height: 350px;
+  -webkit-text-shadow: 0 2px 3px #000000;
+  text-shadow: 0 2px 3px #000000;
 }
 #sliderContainer img {
   position: relative;
@@ -130,6 +135,11 @@ header nav {
 }
 #blurbsContainer {
   height: 350px;
+  -webkit-text-shadow: 0 2px 3px #000000;
+  text-shadow: 0 2px 3px #000000;
+  -moz-box-shadow: 0 3 5px -10 #000000;
+  -webkit-box-shadow: 0 3 5px -10 #000000;
+  box-shadow: 0 3 5px -10 #000000;
 }
 .blurb {
   position: relative;
@@ -149,8 +159,6 @@ header nav {
   margin: 7px 0 0 28px;
 }
 .blurb p {
-  line-height: 24px;
-  font-size: 16px;
   margin: 10px 0 0 0;
 }
 .blurb a {
@@ -161,4 +169,66 @@ header nav {
 .blurb a:hover {
   -webkit-text-shadow: 0 0 10px #ffffff;
   text-shadow: 0 0 10px #ffffff;
+}
+#bottom_contentContainer {
+  height: 500px;
+}
+.bottom_contentWrap {
+  background: #f9f9f9;
+  color: #454545;
+  border-bottom: 1px solid #e6e6e6;
+}
+.testmonial,
+.recentUpdates {
+  width: 475px;
+  position: relative;
+  display: inline-block;
+}
+.testmonial {
+  padding-top: 100px;
+  float: left;
+}
+.testmonial img {
+  position: relative;
+  left: 9px;
+  top: 25px;
+  float: left;
+  z-index: 1;
+}
+.bottomContentText {
+  position: relative;
+  width: 320px;
+  background: #fff;
+  margin: 0 30px;
+  padding: 30px;
+}
+.bottomContentText a {
+  color: #edbfff;
+  margin: 0 0 0 5px;
+  font-size: 30px;
+}
+.bottomContentText h4 {
+  display: inline-block;
+}
+.bottomContentText p {
+  margin: 5px 0 0 0;
+}
+.recentUpdates {
+  padding-top: 130px;
+  float: right;
+}
+.recentUpdates ul {
+  list-style-type: none;
+}
+.recentUpdates ul img {
+  float: left;
+  margin: 0 25px 0 0;
+}
+.recentUpdates ul li {
+  margin: 20px 0;
+}
+.recentUpdates a {
+  float: right;
+  color: #454545;
+  font-size: 18px;
 }
