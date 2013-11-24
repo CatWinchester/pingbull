@@ -87,18 +87,26 @@ header nav {
   display: inline-block;
   float: left;
 }
+.wrap,
 .sliderWrap,
 .blurbWrap,
-.bottom_contentWrap {
+.bottom_contentWrap,
+.logosWrap,
+.wrapFooter {
   width: 100%;
 }
 .sliderWrap {
   margin: 0 0 140px 0;
   background: rgba(0, 0, 0, 0.2);
 }
+.wrapFooter {
+  background: url(img/footerbg.png) no-repeat;
+}
 #sliderContainer,
 #blurbsContainer,
-#bottom_contentContainer {
+#bottom_contentContainer,
+#logosContainer,
+#topFooterContainer {
   width: 960px;
   margin: 0 auto;
 }
@@ -173,7 +181,8 @@ header nav {
 #bottom_contentContainer {
   height: 500px;
 }
-.bottom_contentWrap {
+.bottom_contentWrap,
+.logosWrap {
   background: #f9f9f9;
   color: #454545;
   border-bottom: 1px solid #e6e6e6;
@@ -231,4 +240,77 @@ header nav {
   float: right;
   color: #454545;
   font-size: 18px;
+}
+#logosContainer {
+  text-align: center;
+}
+#logosContainer img {
+  margin: 20px;
+}
+.wrap {
+  background: #ececec;
+  color: #454545;
+}
+#topFooterContainer {
+  position: relative;
+  height: 370px;
+}
+#topFooterContainer .post {
+  width: 300px;
+  float: left;
+  margin: 50px 0 0 0;
+  padding: 10px;
+}
+#topFooterContainer a,
+#topFooterContainer h3 {
+  color: #454545;
+  text-transform: uppercase;
+}
+#topFooterContainer a {
+  font-size: 30px;
+  margin: 5px 0;
+}
+#topFooterContainer h3 {
+  font-size: 50px;
+}
+#topFooterContainer span {
+  color: #b9b9b9;
+}
+#topFooterContainer p {
+  padding: 10px 0;
+}
+#topFooterContainer .post:first-child p:first-of-type {
+  font-style: italic;
+  color: #c5c5c5;
+  padding-bottom: 0;
+  -webkit-text-shadow: 1px 1px 2px #ffffff;
+  text-shadow: 1px 1px 2px #ffffff;
+}
+footer {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  -webkit-text-shadow: 2px 2px 5px #808080;
+  text-shadow: 2px 2px 5px #808080;
+}
+footer menu {
+  padding: 40px 0;
+  float: left;
+  height: 23px;
+}
+footer menu a {
+  margin: 0 16px;
+  font-size: 22px;
+}
+footer menu a:first-of-type {
+  margin-left: 0px;
+}
+footer p {
+  padding: 38px 0;
+  float: right;
+  font-size: 12px;
+}
+footer p a {
+  text-transform: none;
+  font-weight: bold;
 }

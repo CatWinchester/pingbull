@@ -128,14 +128,17 @@ header {
     float:left;
 }
 
-.sliderWrap, .blurbWrap,.bottom_contentWrap{
+.wrap,.sliderWrap, .blurbWrap,.bottom_contentWrap,.logosWrap,.wrapFooter{
     width:100%;
 }
 .sliderWrap{
     margin:0 0 140px 0;    
     background:rgba(0,0,0,0.2);
 }
-#sliderContainer, #blurbsContainer, #bottom_contentContainer{    
+.wrapFooter{
+    background:url("img/footerbg.png") no-repeat;
+}
+#sliderContainer, #blurbsContainer, #bottom_contentContainer,#logosContainer,#topFooterContainer{    
     .centeredElement(@mainWidth);
 }
 #sliderContainer{
@@ -197,7 +200,7 @@ header {
 #bottom_contentContainer {
     height:500px;
 }
-.bottom_contentWrap{
+.bottom_contentWrap, .logosWrap{
     background:@bottomContentWrapCollorGrey;
     color:@bottomContentFontColor;
     border-bottom:1px solid @bottomContentBorderColor;
@@ -253,5 +256,75 @@ header {
         float:right;
         color:@bottomContentFontColor;
         font-size:@aReadMoreSize;
+    }
+}
+#logosContainer{
+    text-align:center;
+    img{
+        margin:20px;
+    }
+}
+.wrap{
+    background:#ececec;
+    color:@bottomContentFontColor;
+}
+#topFooterContainer {
+    position:relative;
+    height:370px;
+    .post {
+        width: @mainWidth/3-20px;
+        float: left;
+        margin:50px 0 0 0;
+        padding:10px;
+    }
+    a, h3{
+        color:@bottomContentFontColor;
+        text-transform:uppercase;
+    }
+    a{        
+        font-size:30px;
+        margin:5px 0;
+    }
+    h3{
+        font-size:50px;
+    }
+    span{
+        color:#b9b9b9;        
+    }
+    p{
+        padding:10px 0;
+    }
+    .post:first-child p:first-of-type{
+        font-style:italic;
+        color:#c5c5c5;
+        padding-bottom:0;
+        .text-shadow(1px,1px,2px,#fff);
+    }
+}
+footer{
+    position:relative;
+    .centeredElement(@mainWidth);
+    .text-shadow();
+    menu{
+        padding:40px 0;
+        float:left;
+        height:23px;
+        a{
+            margin:0 16px;
+            font-size:22px;
+            &:first-of-type{
+                margin-left:0px;
+            }
+        }
+
+    }
+    p{
+        padding:38px 0;
+        float:right;
+        font-size:12px;
+        a{
+            text-transform:none;
+            font-weight:bold;
+        }
     }
 }
