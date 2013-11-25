@@ -487,6 +487,7 @@ footer p a {
     border-radius: 10px;
     border-top: 1px solid rgba(237, 191, 255, 0.63);
     border-bottom: 2px solid #322539;
+    position: relative;
     z-index: 200;
   }
   header nav:hover a:not(:first-child) {
