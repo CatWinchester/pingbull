@@ -18,6 +18,7 @@
     font-weight: normal;
     font-style: normal;
 }
+@h1h2FontSize:50px;
 
 @mainWidth:960px;
 @mainColorWhite:#fff;
@@ -67,21 +68,18 @@
    padding:0;
    border:0;
 }
-body{
-    background: url("img/bg.png") no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family:LeagueGothic, Helvetica, Arial, sans-serif;
-    font-size:24px;
-    font-weight:100;
-    color:@mainColorWhite;
+body {
+    background: url("img/bg.png") no-repeat;
+    font-family: LeagueGothic, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    color: @mainColorWhite;
 }
 h2{
-    font-size:50px;
+    font-size:@h1h2FontSize;
 }
 h3{
+    font-size:28px;
    color:@mainColorPink;
 }
 h4{
@@ -103,13 +101,12 @@ a{
     text-decoration: none;
     text-transform:uppercase;
 }
-
 header {
     .centeredElement(@mainWidth);
     height: @headerHeight;
     .text-shadow();
     h1{        
-       font-size:60px;
+       font-size:@h1h2FontSize;
        text-transform:uppercase;
     }
     span {
@@ -140,7 +137,6 @@ header {
     float:left;
     margin:40px 0;
 }
-
 .wrap,.sliderWrap, .blurbWrap,.bottom_contentWrap,.logosWrap,.wrapFooter{
     width:100%;
 }
@@ -148,12 +144,9 @@ header {
     margin:0 0 140px 0;    
     background:rgba(0,0,0,0.2);
 }
-.wrapFooter{
-    background:url("img/footerbg.png") no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.wrapFooter {
+    background: url("img/footerbg.png") no-repeat;    
+    width: 100%;
 }
 #sliderContainer, #blurbsContainer, #bottom_contentContainer,#logosContainer,#topFooterContainer{    
     .centeredElement(@mainWidth);
@@ -180,7 +173,7 @@ header {
 .blurbWrap{
     .gradient(@mainColorBlueBerry,@mainColorDarkBerry);
     border-top:1px solid @mainColorDarkBerry;
-    border-bottom:2px solid #fff;
+    border-bottom:1px solid #fff;
 }
 #blurbsContainer{
     height:@blurbHeight;
@@ -347,6 +340,47 @@ footer{
         }
     }
 }
-@media (max-width: 768px){
+
+@media only screen and (max-width:960px) and (min-width:768px){
     @mainWidth:768px;
-} 
+    header, footer, #sliderContainer, #blurbsContainer, #bottom_contentContainer,#logosContainer,#topFooterContainer{    
+        .centeredElement(@mainWidth);
+    }
+    h1, h2{ font-size:40px;}
+    h3{ font-size: 22px; overflow:hidden; white-space:nowrap;}
+    h4{ font-size:24px;}
+    p{ font-size:16px; line-height:24px; overflow:hidden;}
+    h1, #logo{ float:none; }
+    header{ 
+        nav{ float:none; margin-top:20px; }
+        a{ &:first-child{ margin-left:0px; padding-left:0px;}}
+    }
+    #logo{ margin:40px 0 0 0; }
+    .sliderNavigation { width: 280px;
+                        p { height:100px; overflow:hidden; font-size:15px;}
+    }
+    .blurb { width: @mainWidth/3-10;
+             .blurbText{ width:160px;
+                         a,p{margin:0;}
+                         p{  height:150px; }
+             }
+    }
+    .testmonial, .recentUpdates { width:@mainWidth/2-10;}
+    .bottomContentText{ width:200px;
+                        h4{ display:block;font-size:24px;}
+                        a{ font-size:24px; margin:0;}
+                        p{ height:150px;}
+    }
+    .recentUpdates{p{width:255px; white-space:nowrap;}}
+    #topFooterContainer{.post{ width: @mainWidth/3-20;}
+                        .post:first-child p:first-of-type{display:none;}
+                        p{ width: 190px; height: 154px; }
+    }
+    .wrapFooter{background-position: center center;
+                background-attachment:fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;}
+    footer {menu{float:none;}}
+}
