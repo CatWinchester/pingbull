@@ -27,7 +27,7 @@ body {
   background: url(img/bg.png) no-repeat;
   font-family: LeagueGothic, Helvetica, Arial, sans-serif;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: normal;
   color: #ffffff;
 }
 h2 {
@@ -90,6 +90,9 @@ header a:hover {
 }
 header a:last-child {
   margin-right: 0;
+}
+header a.active {
+  border-bottom: 2px solid #edbfff;
 }
 header nav {
   float: right;
@@ -437,5 +440,278 @@ footer p a {
   }
   footer menu {
     float: none;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 460px) {
+  header,
+  footer,
+  #sliderContainer,
+  #blurbsContainer,
+  #bottom_contentContainer,
+  #logosContainer,
+  #topFooterContainer {
+    width: 460px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 40px;
+    z-index: -8;
+  }
+  h3 {
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+  }
+  header nav {
+    margin-top: 0;
+    float: none;
+    text-align: center;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    background: rgba(50, 37, 57, 0.8);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-top: 1px solid rgba(237, 191, 255, 0.63);
+    border-bottom: 2px solid #322539;
+    z-index: 200;
+  }
+  header nav:hover a:not(:first-child) {
+    display: block;
+    line-height: 40px;
+    border-top: 1px solid rgba(237, 191, 255, 0.5);
+    border-bottom: 2px solid #322539;
+  }
+  header nav:hover a:hover {
+    background: rgba(50, 37, 57, 0.8);
+  }
+  header nav a {
+    display: block;
+    line-height: 40px;
+    border-top: 1px solid rgba(237, 191, 255, 0.5);
+    border-bottom: 2px solid #322539;
+    margin: 0;
+    padding: 0;
+  }
+  header nav a:not(:first-child) {
+    display: none;
+  }
+  header nav a:hover {
+    background: rgba(50, 37, 57, 0.8);
+  }
+  header nav a:first-child {
+    border-top: none;
+  }
+  #logo {
+    float: none;
+    width: auto;
+    display: block;
+    margin-bottom: 0px;
+  }
+  .sliderWrap {
+    z-index: -11;
+  }
+  .sliderNavigation {
+    width: 240px;
+    margin-top: 90px;
+  }
+  .sliderNavigation p {
+    display: none;
+  }
+  #sliderContainer {
+    height: 270px;
+    z-index: -10;
+  }
+  #sliderContainer img {
+    width: 200px;
+    margin: 0;
+    z-index: -9;
+  }
+  #blurbsContainer {
+    height: 600px;
+  }
+  .blurb {
+    width: 460px;
+    float: none;
+    height: auto;
+    margin: 50px 0 0 0;
+  }
+  .blurb .blurbText {
+    width: 390px;
+  }
+  .blurb .blurbText a,
+  .blurb .blurbText p {
+    margin: 0;
+  }
+  .blurb .blurbText p {
+    margin: 0 0 5px 0;
+  }
+  #bottom_contentContainer {
+    height: 700px;
+  }
+  .recentUpdates,
+  .testmonial {
+    padding-top: 20px;
+  }
+  .recentUpdates {
+    float: none;
+    width: 380px;
+    margin-left: 60px;
+  }
+  .recentUpdates p {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 255px;
+  }
+  #topFooterContainer {
+    height: 850px;
+  }
+  #topFooterContainer .post {
+    width: 460px;
+    margin-top: 50px;
+  }
+  footer {
+    text-align: center;
+  }
+  footer p {
+    float: none;
+  }
+  footer menu {
+    float: none;
+  }
+  footer menu a {
+    margin: 0 8px;
+  }
+}
+@media only screen and (max-width: 460px) and (min-width: 320px) {
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 40px;
+    z-index: 100;
+  }
+  h3 {
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+  }
+  header,
+  footer,
+  #sliderContainer,
+  #blurbsContainer,
+  #bottom_contentContainer,
+  #logosContainer,
+  #topFooterContainer {
+    width: 320px;
+    margin: 0 auto;
+  }
+  header nav {
+    float: none;
+    text-align: center;
+    margin-top: 0px;
+  }
+  header nav a:not(:first-child) {
+    display: none;
+  }
+  #logo {
+    float: none;
+    width: auto;
+    display: block;
+  }
+  #sliderContainer {
+    height: 250px;
+    text-align: center;
+  }
+  #sliderContainer img,
+  #sliderContainer p {
+    display: none;
+  }
+  .sliderNavigation {
+    width: 320px;
+    margin-top: 90px;
+  }
+  #blurbsContainer {
+    height: 700px;
+  }
+  .blurb {
+    width: 320px;
+    float: none;
+    height: auto;
+    margin: 50px 0 0 0;
+  }
+  .blurb .blurbText {
+    width: 250px;
+  }
+  .blurb .blurbText a,
+  .blurb .blurbText p {
+    margin: 0;
+  }
+  .blurb .blurbText p {
+    margin: 0 0 5px 0;
+    height: 100px;
+  }
+  #bottom_contentContainer {
+    height: 700px;
+  }
+  .bottomContentText {
+    width: auto;
+  }
+  .bottomContentText p {
+    overflow: hidden;
+    height: 200px;
+  }
+  .recentUpdates,
+  .testmonial {
+    padding-top: 20px;
+  }
+  .recentUpdates {
+    float: none;
+    width: 320px;
+    margin-left: 30px;
+  }
+  .recentUpdates p,
+  .recentUpdates h5 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 215px;
+  }
+  .testmonial {
+    width: 320px;
+  }
+  #topFooterContainer {
+    display: none;
+  }
+  footer {
+    text-align: center;
+    height: 150px;
+  }
+  footer p {
+    float: none;
+  }
+  footer menu {
+    display: none;
   }
 }
